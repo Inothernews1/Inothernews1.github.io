@@ -1,8 +1,36 @@
 <!DOCTYPE html>
-<html> 
-	<head>
-		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<h1>Test</h1>
-	</head>
+<html>
+  <head>
+    <script language="javascript">
+      function rand_max(n) {
+        return Math.round(Math.random() * n) % n;
+      }
+
+      let title_options = [
+        "great",
+        "slightly scary",
+        "kinda cringy",
+        "cool-ish",
+        "mucho bien"
+      ];
+
+      document.title = "Jonah Sussman's " + title_options[rand_max(title_options.length)] + " website";
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yes I am a professional web developer and did not just look up how to html-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <h1><i>Jonah Sussman's Website</i></h1>
+      <script>
+        document.write("<p>A " + title_options[rand_max(title_options.length)] + " place. Hello!</p>")
+      </script>
+      <noscript>
+        <p><b>A great place. Hello!<b></p>
+      </noscript>
+    </div>
+  </body>
 </html>
